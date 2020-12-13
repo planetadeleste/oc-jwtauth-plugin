@@ -33,7 +33,7 @@ return [
         |
         */
 
-        'auth' => RLuders\JWTAuth\Classes\AuthAdapter::class,
+        'auth' => PlanetaDelEste\JWTAuth\Classes\AuthAdapter::class,
 
         /*
         |--------------------------------------------------------------------------

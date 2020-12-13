@@ -1,8 +1,6 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Requests;
-
-use RLuders\JWTAuth\Http\Requests\Request;
+namespace PlanetaDelEste\JWTAuth\Http\Requests;
 
 class ResetPasswordRequest extends Request
 {

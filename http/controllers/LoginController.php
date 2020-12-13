@@ -1,13 +1,13 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Controllers;
+namespace PlanetaDelEste\JWTAuth\Http\Controllers;
 
 use Event;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use RLuders\JWTAuth\Classes\JWTAuth;
+use PlanetaDelEste\JWTAuth\Classes\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use RLuders\JWTAuth\Http\Requests\LoginRequest;
+use PlanetaDelEste\JWTAuth\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {

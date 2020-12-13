@@ -1,13 +1,9 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Requests;
-
-use RLuders\JWTAuth\Http\Requests\Request;
-use RLuders\JWTAuth\Http\Requests\Traits\CheckLoginAttribute;
+namespace PlanetaDelEste\JWTAuth\Http\Requests;
 
 class RegisterRequest extends Request
 {
-    use CheckLoginAttribute;
 
     /**
      * {@inheritDoc}
@@ -31,15 +27,9 @@ class RegisterRequest extends Request
      */
     public function rules()
     {
-        $rules = [
+        return [
             'email'    => 'required|between:3,64|email|unique:users',
             'password' => 'required|between:4,64|confirmed',
         ];
-
-        if ($this->isUsernameLoginAttribute()) {
-            $rules['username'] = 'required|between:3,64|unique:users';
-        }
-
-        return $rules;
     }
 }

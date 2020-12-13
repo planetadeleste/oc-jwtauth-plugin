@@ -1,11 +1,11 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Requests;
+namespace PlanetaDelEste\JWTAuth\Http\Requests;
 
 use Validator;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request as BaseRequest;
-use RLuders\JWTAuth\Exceptions\JsonValidationException;
+use PlanetaDelEste\JWTAuth\Exceptions\JsonValidationException;
 
 abstract class Request extends BaseRequest
 {

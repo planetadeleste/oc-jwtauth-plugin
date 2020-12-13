@@ -1,8 +1,8 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Requests;
+namespace PlanetaDelEste\JWTAuth\Http\Requests;
 
-use RLuders\JWTAuth\Http\Requests\Request;
+use PlanetaDelEste\JWTAuth\Http\Requests\Request;
 
 class ForgotPasswordRequest extends Request
 {

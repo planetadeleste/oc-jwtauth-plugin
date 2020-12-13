@@ -1,13 +1,9 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Requests;
-
-use RLuders\JWTAuth\Http\Requests\Request;
-use RLuders\JWTAuth\Http\Requests\Traits\CheckLoginAttribute;
+namespace PlanetaDelEste\JWTAuth\Http\Requests;
 
 class LoginRequest extends Request
 {
-    use CheckLoginAttribute;
 
     /**
      * Get the validation rules that apply to the request.
@@ -29,9 +25,7 @@ class LoginRequest extends Request
      */
     protected function getLoginRules()
     {
-        return $this->isUsernameLoginAttribute()
-                ? 'required|between:2,255'
-                : 'required|email|between:6,255';
+        return 'required|email|between:6,255';
     }
 
     /**
@@ -41,7 +35,7 @@ class LoginRequest extends Request
      */
     public function getCredentials()
     {
-        $username = $this->isUsernameLoginAttribute() ? 'username' : 'email';
+        $username = 'email';
         return [
             $username => $this->get('login'),
             'password' => $this->get('password')

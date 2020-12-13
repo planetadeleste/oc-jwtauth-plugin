@@ -1,11 +1,13 @@
 <?php
 
-namespace RLuders\JWTAuth;
+namespace PlanetaDelEste\JWTAuth;
 
 use Config;
+use PlanetaDelEste\JWTAuth\Facades\JWTAuth;
+use PlanetaDelEste\JWTAuth\Providers\AuthServiceProvider;
 use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
-use RLuders\JWTAuth\Models\Settings as PluginSettings;
+use PlanetaDelEste\JWTAuth\Models\Settings as PluginSettings;
 
 /**
  * JWTAuth Plugin Information File.
@@ -17,7 +19,7 @@ class Plugin extends PluginBase
      *
      * @var array
      */
-    public $require = ['RainLab.User'];
+    public $require = ['Lovata.Buddies'];
 
     /**
      * Returns information about this plugin.
@@ -27,8 +29,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'rluders.jwtauth::lang.plugin.name',
-            'description' => 'rluders.jwtauth::lang.plugin.description',
+            'name'        => 'planetadeleste.jwtauth::lang.plugin.name',
+            'description' => 'planetadeleste.jwtauth::lang.plugin.description',
             'author'      => 'Ricardo Lüders',
             'icon'        => 'icon-user-secret',
         ];
@@ -43,13 +45,13 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'rluders.jwtauth::lang.settings.menu_label',
-                'description' => 'rluders.jwtauth::lang.settings.menu_description',
+                'label'       => 'planetadeleste.jwtauth::lang.settings.menu_label',
+                'description' => 'planetadeleste.jwtauth::lang.settings.menu_description',
                 'category'    => SettingsManager::CATEGORY_USERS,
                 'icon'        => 'icon-user-secret',
-                'class'       => 'RLuders\JWTAuth\Models\Settings',
+                'class'       => 'PlanetaDelEste\JWTAuth\Models\Settings',
                 'order'       => 600,
-                'permissions' => ['rluders.jwtauth.access_settings'],
+                'permissions' => ['planetadeleste.jwtauth.access_settings'],
             ]
         ];
     }
@@ -62,9 +64,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'rluders.jwtauth.access_settings' => [
-                'tab' => 'rluders.jwtauth::lang.plugin.name',
-                'label' => 'rluders.jwtauth::lang.permissions.settings'
+            'planetadeleste.jwtauth.access_settings' => [
+                'tab' => 'planetadeleste.jwtauth::lang.plugin.name',
+                'label' => 'planetadeleste.jwtauth::lang.permissions.settings'
             ]
         ];
     }
@@ -76,7 +78,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        $this->app->register(\RLuders\JWTAuth\Providers\AuthServiceProvider::class);
-        $this->app->alias('JWTAuth', \RLuders\JWTAuth\Facades\JWTAuth::class);
+        $this->app->register(AuthServiceProvider::class);
+        $this->app->alias('JWTAuth', JWTAuth::class);
     }
 }

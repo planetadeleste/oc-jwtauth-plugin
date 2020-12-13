@@ -1,13 +1,11 @@
 <?php
 
-namespace RLuders\JWTAuth\Providers;
+namespace PlanetaDelEste\JWTAuth\Providers;
 
 use Config;
-use Response;
-use RainLab\User\Models\User;
 use Tymon\JWTAuth\Providers\AbstractServiceProvider;
-use RLuders\JWTAuth\Models\Settings as PluginSettings;
-use RLuders\JWTAuth\Exceptions\JsonValidationException;
+use PlanetaDelEste\JWTAuth\Models\Settings as PluginSettings;
+use PlanetaDelEste\JWTAuth\Exceptions\JsonValidationException;
 
 class AuthServiceProvider extends AbstractServiceProvider
 {
@@ -36,50 +34,50 @@ class AuthServiceProvider extends AbstractServiceProvider
     protected function bindRequests()
     {
         $this->app->bind(
-            \RLuders\JWTAuth\Http\Requests\TokenRequest::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\TokenRequest::class,
             function ($app) {
-                return new \RLuders\JWTAuth\Http\Requests\TokenRequest(input());
+                return new \PlanetaDelEste\JWTAuth\Http\Requests\TokenRequest(input());
             }
         );
 
         $this->app->bind(
-            \RLuders\JWTAuth\Http\Requests\LoginRequest::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\LoginRequest::class,
             function ($app) {
-                return new \RLuders\JWTAuth\Http\Requests\LoginRequest(input());
+                return new \PlanetaDelEste\JWTAuth\Http\Requests\LoginRequest(input());
             }
         );
 
         $this->app->bind(
-            \RLuders\JWTAuth\Http\Requests\ActivationRequest::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\ActivationRequest::class,
             function ($app) {
-                return new \RLuders\JWTAuth\Http\Requests\ActivationRequest(input());
+                return new \PlanetaDelEste\JWTAuth\Http\Requests\ActivationRequest(input());
             }
         );
 
         $this->app->bind(
-            \RLuders\JWTAuth\Http\Requests\ForgotPasswordRequest::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\ForgotPasswordRequest::class,
             function ($app) {
-                return new \RLuders\JWTAuth\Http\Requests\ForgotPasswordRequest(input());
+                return new \PlanetaDelEste\JWTAuth\Http\Requests\ForgotPasswordRequest(input());
             }
         );
 
         $this->app->bind(
-            \RLuders\JWTAuth\Http\Requests\RegisterRequest::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\RegisterRequest::class,
             function ($app) {
-                return new \RLuders\JWTAuth\Http\Requests\RegisterRequest(input());
+                return new \PlanetaDelEste\JWTAuth\Http\Requests\RegisterRequest(input());
             }
         );
 
         $this->app->bind(
-            \RLuders\JWTAuth\Http\Requests\ResetPasswordRequest::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\ResetPasswordRequest::class,
             function ($app) {
-                return new \RLuders\JWTAuth\Http\Requests\ResetPasswordRequest(input());
+                return new \PlanetaDelEste\JWTAuth\Http\Requests\ResetPasswordRequest(input());
             }
         );
 
         // Resolving the bindings above and validating it
         $this->app->resolving(
-            \RLuders\JWTAuth\Http\Requests\Request::class,
+            \PlanetaDelEste\JWTAuth\Http\Requests\Request::class,
             function ($request, $app) {
                 $request->validate();
             }

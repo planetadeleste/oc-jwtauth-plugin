@@ -1,18 +1,18 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Controllers;
+namespace PlanetaDelEste\JWTAuth\Http\Controllers;
 
 use Mail;
 use Event;
 use Illuminate\Http\Response;
-use RLuders\JWTAuth\Models\User;
+use PlanetaDelEste\JWTAuth\Models\User;
 use Illuminate\Routing\Controller;
-use RLuders\JWTAuth\Classes\JWTAuth;
-use RLuders\JWTAuth\Models\Settings;
-use RLuders\JWTAuth\Http\Requests\RegisterRequest;
-use RLuders\JWTAuth\Http\Controllers\Traits\CanMakeUrl;
+use PlanetaDelEste\JWTAuth\Classes\JWTAuth;
+use PlanetaDelEste\JWTAuth\Models\Settings;
+use PlanetaDelEste\JWTAuth\Http\Requests\RegisterRequest;
+use PlanetaDelEste\JWTAuth\Http\Controllers\Traits\CanMakeUrl;
 use RainLab\User\Models\Settings as RainLabUserSettings;
-use RLuders\JWTAuth\Http\Controllers\Traits\CanSendMail;
+use PlanetaDelEste\JWTAuth\Http\Controllers\Traits\CanSendMail;
 
 class RegisterController extends Controller
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace RLuders\JWTAuth\Http\Controllers;
+namespace PlanetaDelEste\JWTAuth\Http\Controllers;
 
 use Mail;
 use Illuminate\Http\Response;
-use RLuders\JWTAuth\Models\User;
-use RLuders\JWTAuth\Models\Settings;
+use PlanetaDelEste\JWTAuth\Models\User;
+use PlanetaDelEste\JWTAuth\Models\Settings;
 use Illuminate\Routing\Controller;
-use RLuders\JWTAuth\Http\Requests\ForgotPasswordRequest;
-use RLuders\JWTAuth\Http\Controllers\Traits\CanMakeUrl;
-use RLuders\JWTAuth\Http\Controllers\Traits\CanSendMail;
+use PlanetaDelEste\JWTAuth\Http\Requests\ForgotPasswordRequest;
+use PlanetaDelEste\JWTAuth\Http\Controllers\Traits\CanMakeUrl;
+use PlanetaDelEste\JWTAuth\Http\Controllers\Traits\CanSendMail;
 
 class ForgotPasswordController extends Controller
 {

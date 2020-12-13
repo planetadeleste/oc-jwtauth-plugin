@@ -1,9 +1,9 @@
 <?php
 
-namespace RLuders\JWTAuth\Models;
+namespace PlanetaDelEste\JWTAuth\Models;
 
 use Tymon\JWTAuth\Contracts\JWTSubject;
-use RainLab\User\Models\User as BaseUser;
+use Lovata\Buddies\Models\User as BaseUser;
 
 class User extends BaseUser implements JWTSubject
 {

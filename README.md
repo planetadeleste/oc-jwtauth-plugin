@@ -3,24 +3,26 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/rluders/oc-jwtauth-plugin">
-    <img src="https://travis-ci.org/rluders/oc-jwtauth-plugin.svg?branch=main">
+  <a href="https://travis-ci.org/planetadeleste/oc-jwtauth-plugin">
+    <img src="https://travis-ci.org/planetadeleste/oc-jwtauth-plugin.svg?branch=main">
   </a>
-  <a href="https://octobercms.com/plugin/rluders-jwtauth">
+  <a href="https://octobercms.com/plugin/planetadeleste-jwtauth">
     <img src="https://img.shields.io/badge/OctoberCMS-Plugin-%23EE7203.svg">
   </a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2FHDXT4QTD7RA&source=url">
     <img src="https://img.shields.io/badge/Donate-PayPal-green.svg">
   </a>
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-    <img src="https://img.shields.io/github/license/rluders/oc-jwtauth-plugin.svg">
-  </a>      
-  <a href="https://snyk.io//test/github/rluders/oc-jwtauth-plugin?targetFile=composer.lock"><img src="https://snyk.io//test/github/rluders/oc-jwtauth-plugin/badge.svg?targetFile=composer.lock" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io//test/github/rluders/oc-jwtauth-plugin?targetFile=composer.lock" style="max-width:100%;"></a>  
+    <img src="https://img.shields.io/github/license/planetadeleste/oc-jwtauth-plugin.svg">
+  </a>
+  <a href="https://snyk.io//test/github/planetadeleste/oc-jwtauth-plugin?targetFile=composer.lock"><img src="https://snyk.io//test/github/planetadeleste/oc-jwtauth-plugin/badge.svg?targetFile=composer.lock" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io//test/github/planetadeleste/oc-jwtauth-plugin?targetFile=composer.lock" style="max-width:100%;"></a>
 </p>
 
 # Introduction
 
-This plugin provides a JSON Web Tokens authentication mechanism for [OctoberCMS](http://www.octobercms.com) integrated with RainLab.User. It's essential for your web application built with Angular, Vue.js, React or other modern Javascript frameworks.
+>This plugin is a fork of [rluders/oc-jwtauth-plugin](https://github.com/rluders/oc-jwtauth-plugin), adapted to be used with Lovata.Buddies plugin instead of RainLab.Users
+
+This plugin provides a JSON Web Tokens authentication mechanism for [OctoberCMS](http://www.octobercms.com) integrated with Lovata.Buddies. It's essential for your web application built with Angular, Vue.js, React or other modern Javascript frameworks.
 
 
 ## Requirements
