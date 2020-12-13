@@ -20,14 +20,14 @@
 
 # Introduction
 
->This plugin is a fork of [rluders/oc-jwtauth-plugin](https://github.com/rluders/oc-jwtauth-plugin), adapted to be used with Lovata.Buddies plugin instead of RainLab.Users
+>This plugin is a fork of [rluders/oc-jwtauth-plugin](https://github.com/rluders/oc-jwtauth-plugin), adapted to be used with [Lovata.Buddies](https://github.com/oc-shopaholic/oc-buddies-plugin) plugin instead of RainLab.Users
 
 This plugin provides a JSON Web Tokens authentication mechanism for [OctoberCMS](http://www.octobercms.com) integrated with Lovata.Buddies. It's essential for your web application built with Angular, Vue.js, React or other modern Javascript frameworks.
 
 
 ## Requirements
 
-* [RainLab.User](https://github.com/rainlab/user-plugin) plugin
+* [Lovata.Buddies](https://github.com/oc-shopaholic/oc-buddies-plugin) plugin
 * [RLuders.CORS](https://octobercms.com/plugin/rluders-cors) plugin (optional, but recommended)
 
 ## Theme
