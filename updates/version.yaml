@@ -44,3 +44,11 @@
 1.3.3:
     - Added Czech Language support
     - Mirror hotfixes
+1.3.4:
+    - Move plugin to PlanetaDelEste plugin root name
+    - Change RainLab.User to Lovata.Buddies
+    - Update composer.json
+1.3.5:
+    - Remove composer ~1.0 requirement
+    - Use tymon/jwt-auth:dev-develop instead of ^1.0
+
