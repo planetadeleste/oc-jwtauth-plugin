@@ -18,9 +18,11 @@
             "PlanetaDelEste\\JWTAuth\\": ""
         }
     },
+    "extra": {
+        "installer-name": "jwtauth"
+    },
     "require": {
         "php": ">=7.2",
-        "composer/installers": "~1.0",
         "tymon/jwt-auth": "^1.0"
     },
     "minimum-stability": "dev"
